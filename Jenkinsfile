@@ -31,3 +31,10 @@ pipeline {
         }
     }
 }
+stage('Test') {
+    steps {
+        script {
+            sh './non_existent_binary'  // Intentional Error
+        }
+    }
+}
